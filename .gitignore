@@ -1,0 +1,100 @@
+##############################
+# Visual Studio / C++ ignore #
+##############################
+
+# Build results
+/[Dd]ebug/
+/[Rr]elease/
+/x64/
+/x86/
+/[Bb]uild/
+/[Bb]in/
+/[Oo]ut/
+/ipch/
+
+# Compiled object files
+*.obj
+*.o
+*.lo
+*.slo
+
+# Precompiled headers
+*.pch
+*.gch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Dynamic libraries
+*.dll
+*.so
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug files
+*.pdb
+*.idb
+*.ipch
+*.sdf
+*.opensdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+*.db
+*.opendb
+
+# Logs and temp files
+*.log
+*.tlog
+*.tmp
+*.user
+*.userosscache
+*.suo
+*.ncb
+*.aps
+*.unsuccessfulbuild
+*.lastbuildstate
+
+# Visual Studio folders
+/.vs/
+/.vscode/
+
+# Project-specific
+*.vcxproj.user
+*.vcxproj.filters
+
+# Backup / autosave
+*~
+*.bak
+*.swp
+*.swn
+*.swo
+
+# CMake (if used)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# IDE metadata
+.idea/
+*.iml
+
+##############################
+# Allowed data files
+##############################
+# Keep JSON, TXT, CSV for data or configuration
+!*.json
+!*.txt
+!*.csv
+
+##############################
+# End of .gitignore
+##############################
