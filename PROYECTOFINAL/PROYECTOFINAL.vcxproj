@@ -123,7 +123,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PROYECTOFINAL.cpp" />
+    <ClCompile Include="CategoryRepository.cpp" />
+    <ClCompile Include="ClothingOrderBuilder.cpp" />
+    <ClCompile Include="DataLoader.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ItemSelector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CategoryRepository.h" />
+    <ClInclude Include="ClothingOrderBuilder.h" />
+    <ClInclude Include="DataLoader.h" />
+    <ClInclude Include="ItemSelector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="categories.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
