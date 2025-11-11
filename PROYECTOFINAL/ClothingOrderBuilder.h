@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include "CategoryRepository.h"
+#include "SubcategoryRepository.h"
 
 
 class ClothingOrderBuilder {
@@ -17,7 +18,7 @@ private:
     void SelectSubcategory();
 
     CategoryRepository categoryRepo_;
-    
+    SubcategoryRepository subcategoryRepo_;
 
     std::vector<std::string> selectedItems_;
 

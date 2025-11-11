@@ -1,0 +1,8 @@
+Camiseta: 200
+Pantalon: 150
+Vestido: 80
+Sudadera: 100
+Shorts: 120
+Zapatos: 90
+Gorra: 60
+Bufanda: 45

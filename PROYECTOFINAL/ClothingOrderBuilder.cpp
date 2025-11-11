@@ -1,6 +1,7 @@
 #include "ClothingOrderBuilder.h"
 #include "ItemSelector.h"
 #include "CategoryRepository.h";
+#include "SubCategoryRepository.h";
 #include <iostream>
 
 ClothingOrderBuilder::ClothingOrderBuilder() {
@@ -11,6 +12,7 @@ void ClothingOrderBuilder::BuildOrder() {
     std::cout << "Let's build your order!" << std::endl;
 
     SelectCategory();
+    SelectSubcategory();
     SelectSize();
     SelectColor();
 }
@@ -43,7 +45,16 @@ void ClothingOrderBuilder::SelectCategory() {
 }
 
 void ClothingOrderBuilder::SelectSubcategory() {
-}
+    
+        ItemSelector<SubcategoryRepository> selector(subcategoryRepo_, availableSubcategories_, "subcategory");
+        selector.DisplayAvailableItems();
+
+        std::cout << "\nEnter the type of clothing you want: ";
+        std::string choice;
+        std::getline(std::cin, choice);
+
+        selector.AddItemToOrder(choice, selectedItems_);
+    }
 
 void ClothingOrderBuilder::SelectSize() {
  
@@ -52,3 +63,5 @@ void ClothingOrderBuilder::SelectSize() {
 void ClothingOrderBuilder::SelectColor() {
    
 }
+
+

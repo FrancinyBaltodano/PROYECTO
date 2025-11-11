@@ -45,3 +45,5 @@ bool ItemSelector<TRepository>::AddItemToOrder(const std::string& itemName, std:
 #include "CategoryRepository.h"
 template class ItemSelector<CategoryRepository>;
 
+#include "SubcategoryRepository.h"
+template class ItemSelector<SubcategoryRepository>;
