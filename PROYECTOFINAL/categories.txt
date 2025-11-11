@@ -1,0 +1,3 @@
+Ropa: 150
+Calzado: 80
+Accesorios: 120
