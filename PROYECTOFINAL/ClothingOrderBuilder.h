@@ -3,6 +3,7 @@
 #include <string>
 #include "CategoryRepository.h"
 #include "SubcategoryRepository.h"
+#include "SizeRepository.h"
 
 
 class ClothingOrderBuilder {
@@ -19,6 +20,8 @@ private:
 
     CategoryRepository categoryRepo_;
     SubcategoryRepository subcategoryRepo_;
+    SizeRepository sizeRepo_;
+    
 
     std::vector<std::string> selectedItems_;
 

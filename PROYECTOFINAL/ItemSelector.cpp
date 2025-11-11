@@ -47,3 +47,6 @@ template class ItemSelector<CategoryRepository>;
 
 #include "SubcategoryRepository.h"
 template class ItemSelector<SubcategoryRepository>;
+
+#include "SizeRepository.h"
+template class ItemSelector<SizeRepository>;

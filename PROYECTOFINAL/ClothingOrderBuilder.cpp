@@ -57,7 +57,15 @@ void ClothingOrderBuilder::SelectSubcategory() {
     }
 
 void ClothingOrderBuilder::SelectSize() {
- 
+    ItemSelector<SizeRepository> selector(sizeRepo_, availableSizes_, "size");
+    selector.DisplayAvailableItems();
+
+    std::cout << "\nEnter the size you want: ";
+    std::string choice;
+    std::getline(std::cin, choice);
+
+    selector.AddItemToOrder(choice, selectedItems_);
+
 }
 
 void ClothingOrderBuilder::SelectColor() {
