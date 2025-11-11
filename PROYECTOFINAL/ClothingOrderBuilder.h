@@ -22,6 +22,7 @@ private:
     SubcategoryRepository subcategoryRepo_;
     SizeRepository sizeRepo_;
     
+    
 
     std::vector<std::string> selectedItems_;
 
