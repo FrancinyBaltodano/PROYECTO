@@ -50,3 +50,6 @@ template class ItemSelector<SubcategoryRepository>;
 
 #include "SizeRepository.h"
 template class ItemSelector<SizeRepository>;
+
+
+
