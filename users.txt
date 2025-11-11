@@ -1,0 +1,4 @@
+admin:admin123
+cliente1:pass123
+usuario:1234
+tienda:ropa2024
