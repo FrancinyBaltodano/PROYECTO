@@ -69,7 +69,14 @@ void ClothingOrderBuilder::SelectSize() {
 }
 
 void ClothingOrderBuilder::SelectColor() {
-   
+    ItemSelector<ColorRepository> selector(colorRepo_, availableColors_, "color");
+    selector.DisplayAvailableItems();
+
+    std::cout << "\nEnter the color you want: ";
+    std::string choice;
+    std::getline(std::cin, choice);
+
+    selector.AddItemToOrder(choice, selectedItems_);
 }
 
 

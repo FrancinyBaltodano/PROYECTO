@@ -1,0 +1,8 @@
+Rojo: 120
+Azul: 180
+Negro: 250
+Blanco: 200
+Verde: 90
+Amarillo: 70
+Gris: 150
+Rosa: 100

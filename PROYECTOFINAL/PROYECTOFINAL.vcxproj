@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="CategoryRepository.cpp" />
     <ClCompile Include="ClothingOrderBuilder.cpp" />
+    <ClCompile Include="ColorRepository.cpp" />
     <ClCompile Include="DataLoader.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ItemSelector.cpp" />
@@ -134,6 +135,7 @@
   <ItemGroup>
     <ClInclude Include="CategoryRepository.h" />
     <ClInclude Include="ClothingOrderBuilder.h" />
+    <ClInclude Include="ColorRepository.h" />
     <ClInclude Include="DataLoader.h" />
     <ClInclude Include="ItemSelector.h" />
     <ClInclude Include="SizeRepository.h" />
@@ -141,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="categories.txt" />
+    <Text Include="Colors.txt" />
     <Text Include="sizes.txt" />
     <Text Include="subcategories.txt" />
   </ItemGroup>
