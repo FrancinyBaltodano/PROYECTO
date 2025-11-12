@@ -32,7 +32,7 @@ bool HacerLogin() {
 
         // Verificar si el usuario existe y la contraseña es correcta
         if (usuarios.find(usuario) != usuarios.end() && usuarios[usuario] == password) {
-            cout << "\n✓ Login exitoso! Bienvenido, " << usuario << "!" << endl;
+            cout << "\nLogin exitoso! Bienvenido, " << usuario << "!" << endl;
             cout << "========================================\n" << endl;
             system("pause");
             system("cls");
@@ -40,12 +40,12 @@ bool HacerLogin() {
         }
         else {
             intentos++;
-            cout << "\n✗ Credenciales incorrectas. ";
+            cout << "\n Credenciales incorrectas. ";
             if (intentos < maxIntentos) {
                 cout << "Intentos restantes: " << (maxIntentos - intentos) << endl;
             }
             else {
-                cout << "Máximo de intentos alcanzado. Acceso denegado." << endl;
+                cout << "Maximo de intentos alcanzado. Acceso denegado." << endl;
             }
         }
     }

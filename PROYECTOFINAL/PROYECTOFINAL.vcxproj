@@ -128,7 +128,6 @@
     <ClCompile Include="DataLoader.cpp" />
     <ClCompile Include="invoice.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="ItemSelector.cpp" />
     <ClCompile Include="paymentMethod.cpp" />
     <ClCompile Include="priceRepository.cpp" />
     <ClCompile Include="shoppinCart.cpp" />

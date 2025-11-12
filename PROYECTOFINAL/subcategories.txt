@@ -6,3 +6,5 @@ Shorts: 120
 Zapatos: 90
 Gorra: 60
 Bufanda: 45
+Sandalias:50
+Botas:60

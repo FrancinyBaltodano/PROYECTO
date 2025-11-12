@@ -6,3 +6,5 @@ Shorts: 22.00
 Zapatos: 65.00
 Gorra: 12.50
 Bufanda: 18.00
+Botas:89.99
+Sandalias:45.99
