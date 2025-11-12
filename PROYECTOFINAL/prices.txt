@@ -1,0 +1,8 @@
+Camiseta: 15.99
+Pantalon: 29.99
+Vestido: 45.00
+Sudadera: 35.50
+Shorts: 22.00
+Zapatos: 65.00
+Gorra: 12.50
+Bufanda: 18.00

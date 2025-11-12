@@ -1,13 +1,13 @@
-#include "ClothingOrderBuilder.h"
+﻿#include "ClothingOrderBuilder.h"
 #include <iostream>
 #include <string>
 #include <map>
 
 using namespace std;
 
-// Funci�n simple de login - TODO EN UNO
+// Función de login
 bool HacerLogin() {
-    // Usuarios y contrase�as predefinidos
+    // Usuarios y contraseñas predefinidos
     map<string, string> usuarios;
     usuarios["admin"] = "admin123";
     usuarios["cliente1"] = "pass123";
@@ -26,24 +26,26 @@ bool HacerLogin() {
 
         cout << "\nUsuario: ";
         getline(cin, usuario);
-        cout << "Contrase�a: ";
+
+        cout << "Contraseña: ";
         getline(cin, password);
 
-        // Verificar si el usuario existe y la contrase�a es correcta
+        // Verificar si el usuario existe y la contraseña es correcta
         if (usuarios.find(usuario) != usuarios.end() && usuarios[usuario] == password) {
-            cout << "\n? Login exitoso! Bienvenido, " << usuario << "!" << endl;
+            cout << "\n✓ Login exitoso! Bienvenido, " << usuario << "!" << endl;
             cout << "========================================\n" << endl;
+            system("pause");
+            system("cls");
             return true;
         }
         else {
             intentos++;
-            cout << "\n? Credenciales incorrectas. ";
-
+            cout << "\n✗ Credenciales incorrectas. ";
             if (intentos < maxIntentos) {
                 cout << "Intentos restantes: " << (maxIntentos - intentos) << endl;
             }
             else {
-                cout << "Maximo de intentos alcanzado. Acceso denegado." << endl;
+                cout << "Máximo de intentos alcanzado. Acceso denegado." << endl;
             }
         }
     }
@@ -55,20 +57,21 @@ int main() {
     try {
         // PASO 1: Hacer login
         if (!HacerLogin()) {
-            cout << "\n*** Acceso denegado. El programa se cerrara. ***" << endl;
+            cout << "\n*** Acceso denegado. El programa se cerrará. ***" << endl;
             system("pause");
+            system("cls");
             return 1;
         }
 
         // PASO 2: Si login exitoso, entrar a la tienda
         ClothingOrderBuilder builder;
-        builder.BuildOrder();
-        builder.DisplayFinalOrder();
+        builder.Run();  // Usa Run() que maneja todo el flujo
 
     }
     catch (const exception& ex) {
         cerr << "Error fatal: " << ex.what() << endl;
         system("pause");
+        system("cls");
         return 1;
     }
 

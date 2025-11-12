@@ -1,0 +1,37 @@
+# categories.txt
+Ropa: 100
+Calzado: 50
+Accesorios: 75
+
+# subcategories.txt
+Camiseta: 25
+Pantalon: 30
+Vestido: 15
+Sudadera: 20
+Shorts: 18
+Zapatos: 40
+Gorra: 30
+Bufanda: 25
+
+# sizes.txt
+XS: 20
+S: 30
+M: 40
+L: 35
+XL: 25
+XXL: 15
+28: 10
+30: 15
+32: 20
+34: 18
+36: 12
+
+# prices.txt
+Camiseta: 15.99
+Pantalon: 29.99
+Vestido: 45.00
+Sudadera: 35.50
+Shorts: 22.00
+Zapatos: 65.00
+Gorra: 12.50
+Bufanda: 18.00

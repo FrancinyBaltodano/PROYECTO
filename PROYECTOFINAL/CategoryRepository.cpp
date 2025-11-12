@@ -1,23 +1,46 @@
-#include "CategoryRepository.h"
-#include <stdexcept>
+﻿#include "CategoryRepository.h"
+#include <iostream>
 
 CategoryRepository::CategoryRepository() {
-    auto data = DataLoader::LoadFromFile("categories.txt");
-    data_ = std::move(data);
+    // Inicializa las categorías con stock
+    categoryStock_["Ropa"] = 150;
+    categoryStock_["Calzado"] = 80;
+    categoryStock_["Accesorios"] = 120;
+
+    // Ejemplo de subcategorías si quieres vincularlas
+    data_["Ropa"] = { "Camiseta", "Pantalon", "Vestido" };
+    data_["Calzado"] = { "Zapatos", "Sandalias" };
+    data_["Accesorios"] = { "Gorra", "Bufanda" };
 }
 
 int CategoryRepository::GetAvailableQuantity(const std::string& categoryType) const {
-    auto it = data_.find(categoryType);
-    if (it == data_.end()) {
-        throw std::invalid_argument("Unknown category type: " + categoryType);
+    auto it = categoryStock_.find(categoryType);
+    if (it != categoryStock_.end()) {
+        return it->second;
     }
-    return std::stoi(it->second[0]);
+    return 0; // No encontrada
 }
 
+
 void CategoryRepository::UpdateQuantity(const std::string& categoryType, int newQuantity) {
-    auto it = data_.find(categoryType);
-    if (it == data_.end()) {
-        throw std::invalid_argument("Unknown category type: " + categoryType);
+    categoryStock_[categoryType] = newQuantity;
+}
+
+bool CategoryRepository::ReduceQuantity(const std::string& categoryType) {
+    auto it = categoryStock_.find(categoryType);
+    if (it != categoryStock_.end() && it->second > 0) {
+        it->second--; // 🔻 Reducir stock
+        std::cout << "Added " << categoryType << " to your order! (Remaining: " << it->second << ")\n";
+        return true;
     }
-    it->second[0] = std::to_string(newQuantity);
+    std::cout << "❌ Category not found or out of stock.\n";
+    return false;
+}
+
+std::vector<std::string> CategoryRepository::GetAllCategories() const {
+    std::vector<std::string> result;
+    for (const auto& entry : categoryStock_) {
+        result.push_back(entry.first);
+    }
+    return result;
 }

@@ -126,8 +126,12 @@
     <ClCompile Include="CategoryRepository.cpp" />
     <ClCompile Include="ClothingOrderBuilder.cpp" />
     <ClCompile Include="DataLoader.cpp" />
+    <ClCompile Include="invoice.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ItemSelector.cpp" />
+    <ClCompile Include="paymentMethod.cpp" />
+    <ClCompile Include="priceRepository.cpp" />
+    <ClCompile Include="shoppinCart.cpp" />
     <ClCompile Include="SizeRepository.cpp" />
     <ClCompile Include="SubcategoryRepository.cpp" />
   </ItemGroup>
@@ -135,14 +139,22 @@
     <ClInclude Include="CategoryRepository.h" />
     <ClInclude Include="ClothingOrderBuilder.h" />
     <ClInclude Include="DataLoader.h" />
+    <ClInclude Include="invoice.h" />
+    <ClInclude Include="paymentMethod.h" />
+    <ClInclude Include="PriceRepository.h" />
+    <ClInclude Include="shoppingCart.h" />
     <ClInclude Include="ItemSelector.h" />
     <ClInclude Include="SizeRepository.h" />
     <ClInclude Include="SubcategoryRepository.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="categories.txt" />
+    <Text Include="prices.txt" />
     <Text Include="sizes.txt" />
     <Text Include="subcategories.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".txtarchivos de datos" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

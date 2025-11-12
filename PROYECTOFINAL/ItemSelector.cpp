@@ -27,6 +27,7 @@ bool ItemSelector<TRepository>::AddItemToOrder(const std::string& itemName, std:
         if (quantity > 0) {
             selectedItems.push_back(itemName);
             repository_.UpdateQuantity(itemName, quantity - 1);
+            int remaining = repository_.GetAvailableQuantity(itemName);
             std::cout << "Added " << itemName << " to your order!" << std::endl;
             return true;
         }
